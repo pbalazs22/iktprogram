@@ -1,0 +1,51 @@
+﻿<Window x:Class="ikt2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ikt2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="54,26,0,0" TextWrapping="Wrap" Text="Név" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,55,0,0" TextWrapping="Wrap" Text="Szoba szám" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,87,0,0" TextWrapping="Wrap" Text="Szoba Típus" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,149,0,0" TextWrapping="Wrap" Text="Fő" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,0,0,0" TextWrapping="Wrap" Text="Dátum" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,179,0,0" TextWrapping="Wrap" Text="Ellátás" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,118,0,0" TextWrapping="Wrap" Text="Parkolóhely" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,239,0,0" TextWrapping="Wrap" Text="Kisállat" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="126,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="126,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="126,87,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="126,149,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="126,179,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
+        <DatePicker HorizontalAlignment="Left" Margin="111,0,0,0" VerticalAlignment="Center" Height="16" Width="70"/>
+        <DatePicker HorizontalAlignment="Left" Margin="195,0,0,0" VerticalAlignment="Center" Height="16" Width="70" RenderTransformOrigin="0.543,0.397"/>
+        <ComboBox HorizontalAlignment="Left" Margin="108,240,0,0" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5" Height="17">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.04"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="126,117,0,0" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5" Height="17">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.04"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+        <Button Content="Elküldés" HorizontalAlignment="Left" Margin="49,303,0,0" VerticalAlignment="Top"/>
+        <Button Content="Törlés" HorizontalAlignment="Left" Margin="126,303,0,0" VerticalAlignment="Top"/>
+        <Button Content="Módosítás" HorizontalAlignment="Left" Margin="195,303,0,0" VerticalAlignment="Top"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="326,29,0,0"/>
+
+    </Grid>
+</Window>
