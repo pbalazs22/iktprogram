@@ -5,24 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ikt2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TRB" Height="500" Width="1050">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="54,26,0,0" TextWrapping="Wrap" Text="Név" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="54,55,0,0" TextWrapping="Wrap" Text="Szoba szám" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="54,87,0,0" TextWrapping="Wrap" Text="Szoba Típus" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="163*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="54,26,0,0" TextWrapping="Wrap" Text="Név" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,55,0,0" TextWrapping="Wrap" Text="Szoba szám" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,87,0,0" TextWrapping="Wrap" Text="Szoba Típus" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="54,149,0,0" TextWrapping="Wrap" Text="Fő" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="54,0,0,0" TextWrapping="Wrap" Text="Dátum" VerticalAlignment="Center"/>
-        <TextBlock HorizontalAlignment="Left" Margin="54,179,0,0" TextWrapping="Wrap" Text="Ellátás" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="54,118,0,0" TextWrapping="Wrap" Text="Parkolóhely" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="54,239,0,0" TextWrapping="Wrap" Text="Kisállat" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="126,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="126,55,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="126,87,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="126,149,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="126,179,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="99" Height="16"/>
-        <DatePicker HorizontalAlignment="Left" Margin="111,0,0,0" VerticalAlignment="Center" Height="16" Width="70"/>
-        <DatePicker HorizontalAlignment="Left" Margin="195,0,0,0" VerticalAlignment="Center" Height="16" Width="70" RenderTransformOrigin="0.543,0.397"/>
-        <ComboBox HorizontalAlignment="Left" Margin="108,240,0,0" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5" Height="17">
+        <TextBlock HorizontalAlignment="Left" Margin="54,249,0,0" TextWrapping="Wrap" Text="Dátum" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,179,0,0" TextWrapping="Wrap" Text="Ellátás" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="54,118,0,0" TextWrapping="Wrap" Text="Parkolóhely" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,211,0,-211" TextWrapping="Wrap" Text="Kisállat" Grid.ColumnSpan="2" />
+        <TextBox x:Name="NevBox" HorizontalAlignment="Left" Margin="54,26,0,0" TextWrapping="Wrap" Text="valami"  VerticalAlignment="Top" Width="117" Height="16" Grid.Column="1"  GotFocus="NevBox_GotFocus"/>
+        <TextBox x:Name="SzobaBox" HorizontalAlignment="Left" Margin="54,55,0,0" TextWrapping="Wrap" Text="valami" VerticalAlignment="Top" Width="117" Height="16" Grid.Column="1" GotFocus="SzobaBox_GotFocus"/>
+        <ComboBox SelectedIndex="0" x:Name="TipusBox" HorizontalAlignment="Left" Margin="54,87,0,0" Text="" VerticalAlignment="Top" Width="117" Height="24" Grid.Column="1">
+            <ComboBoxItem Content="1"></ComboBoxItem>
+            <ComboBoxItem Content="2"></ComboBoxItem>
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -32,7 +33,22 @@
                 </TransformGroup>
             </ComboBox.RenderTransform>
         </ComboBox>
-        <ComboBox HorizontalAlignment="Left" Margin="126,117,0,0" VerticalAlignment="Top" Width="93" RenderTransformOrigin="0.5,0.5" Height="17">
+        <TextBox x:Name="FoBox" HorizontalAlignment="Left" Margin="54,149,0,0" TextWrapping="Wrap" Text="valami" VerticalAlignment="Top" Width="117" Height="16" Grid.Column="1" GotFocus="FoBox_GotFocus"/>
+        <TextBox x:Name="EllatasBox" HorizontalAlignment="Left" Margin="54,179,0,0" TextWrapping="Wrap" Text="valami" VerticalAlignment="Top" Width="117" Height="16" Grid.Column="1" GotFocus="EllatasBox_GotFocus"/>
+        <DatePicker x:Name="Datumtol" HorizontalAlignment="Left" Margin="39,245,0,0" VerticalAlignment="Top" Height="24" Width="65" Grid.Column="1"/>
+        <DatePicker x:Name="Datumig" HorizontalAlignment="Left" Margin="127,245,0,0" VerticalAlignment="Top" Height="24" Width="65" Grid.Column="1" >
+            <DatePicker.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.541"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DatePicker.RenderTransform>
+        </DatePicker>
+        <ComboBox SelectedIndex="1" x:Name="KisallatBox" HorizontalAlignment="Left" Margin="54,211,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.5,0.5" Height="24" Grid.Column="1">
+            <ComboBoxItem Content="Van"></ComboBoxItem>
+            <ComboBoxItem Content="Nincs"></ComboBoxItem>
             <ComboBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -42,10 +58,35 @@
                 </TransformGroup>
             </ComboBox.RenderTransform>
         </ComboBox>
-        <Button Content="Elküldés" HorizontalAlignment="Left" Margin="49,303,0,0" VerticalAlignment="Top"/>
-        <Button Content="Törlés" HorizontalAlignment="Left" Margin="126,303,0,0" VerticalAlignment="Top"/>
-        <Button Content="Módosítás" HorizontalAlignment="Left" Margin="195,303,0,0" VerticalAlignment="Top"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="326,29,0,0"/>
+        <ComboBox SelectedIndex="1" x:Name ="ParkoloBox" HorizontalAlignment="Left" Margin="54,117,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.5,0.5" Height="24" Grid.Column="1">
+            <ComboBoxItem Content="Igénylés"></ComboBoxItem>
+            <ComboBoxItem Content="Nem szükséges"></ComboBoxItem>
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.04"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+        <Button Content="Elküldés" HorizontalAlignment="Left" Margin="49,303,0,0" VerticalAlignment="Top" Click="Elkuldes_Click" Grid.ColumnSpan="2"/>
+        <Button Content="Törlés" HorizontalAlignment="Left" Margin="54,303,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="Módosítás" HorizontalAlignment="Left" Margin="123,303,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <DataGrid x:Name="FogAdatok" AutoGenerateColumns="True" Margin="202,29,0,0" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Név" Binding="{Binding GuestName}" Width="180"/>
+                <DataGridTextColumn Header="Szoba" Binding="{Binding RoomNumber}" Width="50"/>
+                <DataGridTextColumn Header="Típus" Binding="{Binding RoomType}" Width="50"/>
+                <DataGridCheckBoxColumn Header="Parkoló" Binding="{Binding NeedsParking}" Width="60"/>
+                <DataGridTextColumn Header="Fő" Binding="{Binding GuestsSummary}" Width="50"/>
+                <DataGridTextColumn Header="Ellátás" Binding="{Binding MealPlan}" Width="90"/>
+                <DataGridCheckBoxColumn Header="Kisállat" Binding="{Binding HasPet}" Width="60"/>
+                <DataGridTextColumn Header="Mettől" Binding="{Binding FromDate, StringFormat=d}" Width="110"/>
+                <DataGridTextColumn Header="Meddig" Binding="{Binding ToDate, StringFormat=d}" Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
 
     </Grid>
 </Window>
